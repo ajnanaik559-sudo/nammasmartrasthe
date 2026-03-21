@@ -6,59 +6,59 @@
 
 @layer base {
   :root {
-    --background: 222 47% 6%;
-    --foreground: 200 20% 90%;
+    --background: 0 0% 4%;
+    --foreground: 0 0% 90%;
 
-    --card: 220 40% 9%;
-    --card-foreground: 200 20% 90%;
+    --card: 0 0% 8%;
+    --card-foreground: 0 0% 90%;
 
-    --popover: 220 40% 9%;
-    --popover-foreground: 200 20% 90%;
+    --popover: 0 0% 8%;
+    --popover-foreground: 0 0% 90%;
 
-    --primary: 185 80% 50%;
-    --primary-foreground: 222 47% 6%;
+    --primary: 0 75% 50%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 220 30% 15%;
-    --secondary-foreground: 200 20% 85%;
+    --secondary: 0 0% 12%;
+    --secondary-foreground: 0 0% 85%;
 
-    --muted: 220 25% 12%;
-    --muted-foreground: 215 15% 55%;
+    --muted: 0 0% 10%;
+    --muted-foreground: 0 0% 50%;
 
-    --accent: 160 70% 45%;
-    --accent-foreground: 222 47% 6%;
+    --accent: 0 60% 40%;
+    --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 75% 55%;
+    --destructive: 0 85% 55%;
     --destructive-foreground: 0 0% 100%;
 
     --warning: 38 92% 55%;
-    --warning-foreground: 222 47% 6%;
+    --warning-foreground: 0 0% 4%;
 
     --eco: 145 65% 45%;
-    --eco-foreground: 222 47% 6%;
+    --eco-foreground: 0 0% 4%;
 
     --signal-red: 0 80% 55%;
     --signal-yellow: 45 95% 55%;
     --signal-green: 140 70% 50%;
 
-    --border: 220 30% 18%;
-    --input: 220 30% 18%;
-    --ring: 185 80% 50%;
+    --border: 0 0% 15%;
+    --input: 0 0% 15%;
+    --ring: 0 75% 50%;
 
     --radius: 0.75rem;
 
-    --glow-primary: 0 0 20px hsl(185 80% 50% / 0.3);
-    --glow-accent: 0 0 20px hsl(160 70% 45% / 0.3);
+    --glow-primary: 0 0 20px hsl(0 75% 50% / 0.3);
+    --glow-accent: 0 0 20px hsl(0 60% 40% / 0.3);
     --glow-warning: 0 0 20px hsl(38 92% 55% / 0.3);
-    --glow-destructive: 0 0 20px hsl(0 75% 55% / 0.3);
+    --glow-destructive: 0 0 20px hsl(0 85% 55% / 0.3);
 
-    --sidebar-background: 220 40% 7%;
-    --sidebar-foreground: 200 20% 85%;
-    --sidebar-primary: 185 80% 50%;
-    --sidebar-primary-foreground: 222 47% 6%;
-    --sidebar-accent: 220 30% 15%;
-    --sidebar-accent-foreground: 200 20% 85%;
-    --sidebar-border: 220 30% 18%;
-    --sidebar-ring: 185 80% 50%;
+    --sidebar-background: 0 0% 5%;
+    --sidebar-foreground: 0 0% 85%;
+    --sidebar-primary: 0 75% 50%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 0 0% 12%;
+    --sidebar-accent-foreground: 0 0% 85%;
+    --sidebar-border: 0 0% 15%;
+    --sidebar-ring: 0 75% 50%;
 
     --font-display: 'Inter', system-ui, sans-serif;
     --font-mono: 'JetBrains Mono', monospace;
@@ -94,7 +94,7 @@
   }
 
   .text-gradient-primary {
-    background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)));
+    background: linear-gradient(135deg, hsl(0 75% 55%), hsl(0 60% 35%));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;

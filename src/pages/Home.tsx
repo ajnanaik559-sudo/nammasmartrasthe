@@ -33,16 +33,16 @@ const Home = () => (
         >
           <div className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-1.5 text-xs font-mono text-primary mb-6">
             <Zap className="h-3 w-3" />
-            SMART ADAPTIVE TRAFFIC SYSTEM
+            SMART MOVES FIRST
           </div>
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[0.95]">
-            <span className="text-foreground">Intelligent Traffic</span>
+            <span className="text-foreground">FirstMove</span>
             <br />
             <span className="text-gradient-primary">for Bengaluru</span>
           </h1>
           <p className="mt-6 text-lg text-muted-foreground max-w-xl mx-auto leading-relaxed">
-            Context-aware traffic management that dynamically adapts signals using AI prediction,
-            real-time data, and eco-optimization to transform urban mobility.
+            Context-aware traffic management that makes smart moves first — dynamically adapting signals
+            using AI prediction, real-time data, and eco-optimization.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mt-10">
             <Link
@@ -132,7 +132,7 @@ const Home = () => (
     {/* Footer */}
     <footer className="border-t border-border py-8">
       <div className="container text-center text-xs text-muted-foreground font-mono">
-        SATS v1.0 · Smart Adaptive Traffic System · Built for Bengaluru
+        FirstMove v1.0 · Smart Moves First · Built for Bengaluru
       </div>
     </footer>
   </div>

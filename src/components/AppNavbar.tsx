@@ -23,7 +23,7 @@ const AppNavbar = () => {
             <Zap className="h-5 w-5 text-primary" />
           </div>
           <span className="text-lg font-bold tracking-tight text-foreground">
-            SATS <span className="text-primary font-mono text-sm font-normal">v1.0</span>
+            FirstMove <span className="text-primary font-mono text-sm font-normal">v1.0</span>
           </span>
         </Link>
 
