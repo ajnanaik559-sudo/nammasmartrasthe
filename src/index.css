@@ -2,66 +2,124 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap');
 
 @layer base {
   :root {
-    --background: 0 0% 4%;
-    --foreground: 0 0% 90%;
+    --background: 210 40% 98%;
+    --foreground: 220 25% 15%;
 
-    --card: 0 0% 8%;
-    --card-foreground: 0 0% 90%;
+    --card: 0 0% 100%;
+    --card-foreground: 220 25% 15%;
 
-    --popover: 0 0% 8%;
-    --popover-foreground: 0 0% 90%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 25% 15%;
 
-    --primary: 0 75% 50%;
+    --primary: 199 89% 48%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 0 0% 12%;
-    --secondary-foreground: 0 0% 85%;
+    --secondary: 45 93% 58%;
+    --secondary-foreground: 220 25% 15%;
 
-    --muted: 0 0% 10%;
-    --muted-foreground: 0 0% 50%;
+    --muted: 210 30% 93%;
+    --muted-foreground: 220 15% 45%;
 
-    --accent: 0 60% 40%;
+    --accent: 145 58% 48%;
     --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 85% 55%;
+    --destructive: 0 72% 55%;
     --destructive-foreground: 0 0% 100%;
 
     --warning: 38 92% 55%;
-    --warning-foreground: 0 0% 4%;
+    --warning-foreground: 220 25% 15%;
 
-    --eco: 145 65% 45%;
-    --eco-foreground: 0 0% 4%;
+    --eco: 145 58% 48%;
+    --eco-foreground: 0 0% 100%;
 
     --signal-red: 0 80% 55%;
     --signal-yellow: 45 95% 55%;
-    --signal-green: 140 70% 50%;
+    --signal-green: 145 58% 48%;
 
-    --border: 0 0% 15%;
-    --input: 0 0% 15%;
-    --ring: 0 75% 50%;
+    --bengaluru-blue: 199 89% 48%;
+    --bengaluru-yellow: 45 93% 58%;
+    --bengaluru-green: 145 58% 48%;
+    --bengaluru-orange: 25 95% 58%;
+    --bengaluru-pink: 340 72% 65%;
+    --bengaluru-purple: 270 60% 60%;
+
+    --border: 210 25% 88%;
+    --input: 210 25% 88%;
+    --ring: 199 89% 48%;
 
     --radius: 0.75rem;
 
-    --glow-primary: 0 0 20px hsl(0 75% 50% / 0.3);
-    --glow-accent: 0 0 20px hsl(0 60% 40% / 0.3);
-    --glow-warning: 0 0 20px hsl(38 92% 55% / 0.3);
-    --glow-destructive: 0 0 20px hsl(0 85% 55% / 0.3);
+    --glow-primary: 0 0 20px hsl(199 89% 48% / 0.25);
+    --glow-accent: 0 0 20px hsl(145 58% 48% / 0.25);
+    --glow-warning: 0 0 20px hsl(38 92% 55% / 0.25);
+    --glow-secondary: 0 0 20px hsl(45 93% 58% / 0.25);
 
-    --sidebar-background: 0 0% 5%;
-    --sidebar-foreground: 0 0% 85%;
-    --sidebar-primary: 0 75% 50%;
+    --sidebar-background: 210 40% 96%;
+    --sidebar-foreground: 220 25% 25%;
+    --sidebar-primary: 199 89% 48%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 0 0% 12%;
-    --sidebar-accent-foreground: 0 0% 85%;
-    --sidebar-border: 0 0% 15%;
-    --sidebar-ring: 0 75% 50%;
+    --sidebar-accent: 210 30% 92%;
+    --sidebar-accent-foreground: 220 25% 25%;
+    --sidebar-border: 210 25% 88%;
+    --sidebar-ring: 199 89% 48%;
 
-    --font-display: 'Inter', system-ui, sans-serif;
+    --font-display: 'Baloo 2', 'Inter', system-ui, sans-serif;
+    --font-body: 'Inter', system-ui, sans-serif;
     --font-mono: 'JetBrains Mono', monospace;
+  }
+
+  .dark {
+    --background: 220 25% 8%;
+    --foreground: 210 30% 90%;
+
+    --card: 220 25% 12%;
+    --card-foreground: 210 30% 90%;
+
+    --popover: 220 25% 12%;
+    --popover-foreground: 210 30% 90%;
+
+    --primary: 199 89% 52%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 45 90% 52%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 220 20% 16%;
+    --muted-foreground: 210 15% 55%;
+
+    --accent: 145 58% 45%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 72% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    --warning: 38 92% 55%;
+    --warning-foreground: 220 25% 8%;
+
+    --eco: 145 58% 45%;
+    --eco-foreground: 0 0% 100%;
+
+    --border: 220 20% 20%;
+    --input: 220 20% 20%;
+    --ring: 199 89% 52%;
+
+    --glow-primary: 0 0 20px hsl(199 89% 52% / 0.3);
+    --glow-accent: 0 0 20px hsl(145 58% 45% / 0.3);
+    --glow-warning: 0 0 20px hsl(38 92% 55% / 0.3);
+    --glow-secondary: 0 0 20px hsl(45 90% 52% / 0.3);
+
+    --sidebar-background: 220 25% 7%;
+    --sidebar-foreground: 210 30% 85%;
+    --sidebar-primary: 199 89% 52%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 20% 16%;
+    --sidebar-accent-foreground: 210 30% 85%;
+    --sidebar-border: 220 20% 20%;
+    --sidebar-ring: 199 89% 52%;
   }
 }
 
@@ -71,12 +129,20 @@
   }
 
   body {
-    @apply bg-background text-foreground font-sans antialiased;
+    @apply bg-background text-foreground antialiased;
+    font-family: var(--font-body);
+  }
+
+  h1, h2, h3 {
     font-family: var(--font-display);
   }
 }
 
 @layer utilities {
+  .font-display {
+    font-family: var(--font-display);
+  }
+
   .font-mono {
     font-family: var(--font-mono);
   }
@@ -93,8 +159,19 @@
     box-shadow: var(--glow-warning);
   }
 
+  .glow-secondary {
+    box-shadow: var(--glow-secondary);
+  }
+
+  .text-gradient-bengaluru {
+    background: linear-gradient(135deg, hsl(199 89% 48%), hsl(145 58% 48%), hsl(45 93% 58%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
   .text-gradient-primary {
-    background: linear-gradient(135deg, hsl(0 75% 55%), hsl(0 60% 35%));
+    background: linear-gradient(135deg, hsl(199 89% 48%), hsl(270 60% 60%));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -102,8 +179,8 @@
 
   .bg-grid {
     background-image:
-      linear-gradient(hsl(var(--border) / 0.5) 1px, transparent 1px),
-      linear-gradient(90deg, hsl(var(--border) / 0.5) 1px, transparent 1px);
+      linear-gradient(hsl(var(--border) / 0.4) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(var(--border) / 0.4) 1px, transparent 1px);
     background-size: 40px 40px;
   }
 
@@ -112,8 +189,24 @@
     background-size: 20px 20px;
   }
 
+  .bg-bengaluru-gradient {
+    background: linear-gradient(135deg,
+      hsl(199 89% 48% / 0.08),
+      hsl(145 58% 48% / 0.05),
+      hsl(45 93% 58% / 0.08)
+    );
+  }
+
   .animate-pulse-glow {
     animation: pulseGlow 2s ease-in-out infinite;
+  }
+
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .animate-honk {
+    animation: honk 0.4s ease-in-out;
   }
 }
 
@@ -125,6 +218,16 @@
 @keyframes fadeInUp {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes honk {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
 }
 
 .animate-fade-in-up {

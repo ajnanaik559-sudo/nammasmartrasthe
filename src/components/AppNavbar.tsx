@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import { Activity, BarChart3, Home, Info, Radio, Zap, Menu, X } from "lucide-react";
+import { Activity, BarChart3, Home, Info, Radio, Menu, X } from "lucide-react";
+import ThemeToggle from "./ThemeToggle";
 
 const navItems = [
   { path: "/", label: "Home", icon: Home },
@@ -19,11 +20,11 @@ const AppNavbar = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 border-b border-border bg-background/80 backdrop-blur-xl">
       <div className="container flex h-16 items-center justify-between">
         <Link to="/" className="flex items-center gap-2">
-          <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary/10 glow-primary">
-            <Zap className="h-5 w-5 text-primary" />
+          <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-primary/15 glow-primary">
+            <span className="text-lg">🚦</span>
           </div>
-          <span className="text-lg font-bold tracking-tight text-foreground">
-            FirstMove <span className="text-primary font-mono text-sm font-normal">v1.0</span>
+          <span className="font-display text-lg font-bold tracking-tight text-foreground">
+            Namma Smart Raste
           </span>
         </Link>
 
@@ -38,7 +39,7 @@ const AppNavbar = () => {
                 className={`relative flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
                   isActive
                     ? "text-primary bg-primary/10"
-                    : "text-muted-foreground hover:text-foreground hover:bg-secondary"
+                    : "text-muted-foreground hover:text-foreground hover:bg-muted"
                 }`}
               >
                 <item.icon className="h-4 w-4" />
@@ -54,22 +55,27 @@ const AppNavbar = () => {
           })}
         </div>
 
-        {/* Live indicator */}
-        <div className="hidden md:flex items-center gap-2 text-xs font-mono text-eco">
-          <span className="relative flex h-2 w-2">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-eco opacity-75" />
-            <span className="relative inline-flex rounded-full h-2 w-2 bg-eco" />
-          </span>
-          SYSTEM ONLINE
+        <div className="hidden md:flex items-center gap-3">
+          <ThemeToggle />
+          <div className="flex items-center gap-1.5 text-xs font-mono text-accent">
+            <span className="relative flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75" />
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-accent" />
+            </span>
+            LIVE
+          </div>
         </div>
 
         {/* Mobile toggle */}
-        <button
-          className="md:hidden p-2 text-muted-foreground"
-          onClick={() => setMobileOpen(!mobileOpen)}
-        >
-          {mobileOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-        </button>
+        <div className="md:hidden flex items-center gap-2">
+          <ThemeToggle />
+          <button
+            className="p-2 text-muted-foreground"
+            onClick={() => setMobileOpen(!mobileOpen)}
+          >
+            {mobileOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile menu */}
@@ -92,7 +98,7 @@ const AppNavbar = () => {
                     className={`flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-medium transition-colors ${
                       isActive
                         ? "text-primary bg-primary/10"
-                        : "text-muted-foreground hover:text-foreground hover:bg-secondary"
+                        : "text-muted-foreground hover:text-foreground hover:bg-muted"
                     }`}
                   >
                     <item.icon className="h-4 w-4" />
