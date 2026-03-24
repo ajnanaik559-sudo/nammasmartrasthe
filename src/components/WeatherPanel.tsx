@@ -1,23 +1,30 @@
 import { useEffect, useState } from "react";
 
 function WeatherPanel() {
-  
   const [rainFactor, setRainFactor] = useState<number | null>(null);
 
   useEffect(() => {
-    fetch("https://api.open-meteo.com/v1/forecast?latitude=12.9716&longitude=77.5946&hourly=precipitation")
-      .then(res => res.json())
-      .then(data => {
-        const precipitation = data.hourly.precipitation[0]; // first hour
-        setRainFactor(precipitation > 0 ? 1 : 0);
-      })
-      .catch(err => console.error("Weather API error:", err));
+    async function fetchWeather() {
+      try {
+        const API_URL = import.meta.env.VITE_API_URL;
+        const res = await fetch(`${API_URL}/weather`);
+        const data = await res.json();
+        setRainFactor(data.rainFactor); // must match backend JSON field
+      } catch (err) {
+        console.error("Error fetching weather data:", err);
+      }
+    }
+    fetchWeather();
   }, []);
 
   return (
     <div className="p-4 border border-border rounded-md shadow-md bg-card">
-      <h3 className="text-lg font-bold text-foreground">Weather Condition (Bengaluru)</h3>
-      <p className="text-muted-foreground">Rain Factor: {rainFactor}</p>
+      <h3 className="text-lg font-bold text-foreground">
+        Weather Condition (Bengaluru)
+      </h3>
+      <p className="text-muted-foreground">
+        Rain Factor: {rainFactor !== null ? rainFactor : "Loading..."}
+      </p>
       {rainFactor === 1 ? (
         <p className="text-primary">🌧 Rain detected → signals adapt for safety</p>
       ) : (
