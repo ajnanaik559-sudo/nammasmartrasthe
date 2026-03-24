@@ -61,3 +61,8 @@ def predict(data: TrafficInput):
         "selected": best_road,
         "reason": f"{best_road} selected due to highest priority (traffic + conditions)"
     }
+
+@app.get("/api/traffic")
+def traffic():
+    # Example static response
+    return {"density": 50}
