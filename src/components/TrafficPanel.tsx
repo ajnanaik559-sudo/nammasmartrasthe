@@ -1,16 +1,15 @@
-iimport { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 function TrafficPanel() {
-  const [density, setDensity] = useState<number | null>(null); 
-  const API_URL = import.meta.env.VITE_API_URL; // comes from .env
+  const [density, setDensity] = useState<number | null>(null);
 
   useEffect(() => {
     async function fetchTraffic() {
       try {
+        const API_URL = import.meta.env.VITE_API_URL;
         const res = await fetch(`${API_URL}/traffic`);
         const data = await res.json();
-        // assuming backend returns { density: 50 }
-        setDensity(data.density);
+        setDensity(data.density); // <-- update state here
       } catch (err) {
         console.error("Error fetching traffic data:", err);
       }
