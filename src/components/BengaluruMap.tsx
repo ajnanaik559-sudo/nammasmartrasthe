@@ -1,22 +1,18 @@
-import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
-import "leaflet/dist/leaflet.css";
-
 function BengaluruMap() {
-  // Silk Board Junction coordinates
-  const silkBoard = { lat: 12.9177, lng: 77.6230 };
+  const silkBoardLat = 12.9177;
+  const silkBoardLng = 77.6230;
 
   return (
     <div className="p-4 border border-border rounded-md shadow-md bg-card">
       <h3 className="text-lg font-bold text-foreground mb-2">Bengaluru Junction Map (OSM)</h3>
-      <MapContainer center={[silkBoard.lat, silkBoard.lng]} zoom={14} style={{ height: "400px", width: "100%" }}>
-        <TileLayer
-          attribution='&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a>'
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-        />
-        <Marker position={[silkBoard.lat, silkBoard.lng]}>
-          <Popup>Silk Board Junction 🚦</Popup>
-        </Marker>
-      </MapContainer>
+      <iframe
+        title="Silk Board Junction Map"
+        width="100%"
+        height="400"
+        style={{ border: 0, borderRadius: "8px" }}
+        loading="lazy"
+        src={`https://www.openstreetmap.org/export/embed.html?bbox=${silkBoardLng - 0.02},${silkBoardLat - 0.015},${silkBoardLng + 0.02},${silkBoardLat + 0.015}&layer=mapnik&marker=${silkBoardLat},${silkBoardLng}`}
+      />
     </div>
   );
 }
