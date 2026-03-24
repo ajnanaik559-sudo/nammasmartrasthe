@@ -85,6 +85,15 @@ function makeInitialRoads(context: ContextState): RoadState[] {
 }
 
 export function useSimulation() {
+  const callBackend = async () => {
+  try {
+    const res = await fetch("https://smartflow-backend-kk0i.onrender.com/");
+    const data = await res.json();
+    console.log("Backend:", data);
+  } catch (err) {
+    console.log(err);
+  }
+};
   const [context, setContext] = useState<ContextState>({
     rain: false,
     schoolZone: false,
@@ -223,7 +232,9 @@ export function useSimulation() {
     const newCtx: ContextState = {
       ...context,
       ...scenario.context,
+  
     };
+    callBackend();
     setContext(newCtx);
     setRoads((prev) => {
       const updated = prev.map((r) => {
