@@ -66,7 +66,7 @@ const AppNavbar = () => {
           </div>
         </div>
 
-        {/* Mobile toggle */}
+        {/* Mobile toggle 1 */}
         <div className="md:hidden flex items-center gap-2">
           <ThemeToggle />
           <button
